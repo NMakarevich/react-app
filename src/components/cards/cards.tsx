@@ -16,8 +16,8 @@ class Cards extends React.Component<CardsProps, unknown> {
   render = () => {
     return (
       <div className="cards">
-        {this.props.data.map((item, index) => (
-          <Card key={`card${index}`} {...item} />
+        {this.props.data.map((item) => (
+          <Card key={item.id} {...item} />
         ))}
       </div>
     );

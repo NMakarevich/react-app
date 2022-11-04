@@ -11,7 +11,7 @@ class Card extends React.Component<IPhoto, unknown> {
   render = () => {
     return (
       <div className="card">
-        <img className="card-image" src={this.props.thumbnailUrl} alt={this.props.title} />
+        <img className="card-image" src={this.props.thumbnailUrl} alt={this.props.id.toString()} />
         <div className="card-info">
           <h2 className="card-title">{this.props.title}</h2>
         </div>
