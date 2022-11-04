@@ -1,18 +1,22 @@
 import React from 'react';
 import Card from '../card/card';
-import { YoutubeResponse } from '../../interfaces/youtube-response';
+import { IPhoto } from '../../interfaces/photo';
 
 import './cards.css';
 
-class Cards extends React.Component<YoutubeResponse, unknown> {
-  constructor(props: YoutubeResponse) {
+interface CardsProps {
+  data: IPhoto[];
+}
+
+class Cards extends React.Component<CardsProps, unknown> {
+  constructor(props: CardsProps) {
     super(props);
   }
 
   render = () => {
     return (
       <div className="cards">
-        {this.props.items.map((item, index) => (
+        {this.props.data.map((item, index) => (
           <Card key={`card${index}`} {...item} />
         ))}
       </div>

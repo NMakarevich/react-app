@@ -1,7 +1,7 @@
 import React from 'react';
 import Searchbar from '../../components/searchbar/searchbar';
 import Cards from '../../components/cards/cards';
-import response from '../../mock/response';
+import data from '../../mock/data';
 
 class Main extends React.Component {
   render() {
@@ -9,7 +9,7 @@ class Main extends React.Component {
       <>
         <h2>Main page</h2>
         <Searchbar />
-        <Cards {...response} />
+        <Cards data={data} />
       </>
     );
   }
